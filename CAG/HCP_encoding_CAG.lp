@@ -1,4 +1,4 @@
-cabinet(C) :- cabinetDomain(C), not cabinet_n(C), 6 > #count {1: cabinetTOthing(C,T1), thing(T1)}.
+cabinet(C) :- cabinetDomain(C), not cabinet_n(C), 6 > #count {1: cabinetTOthing(C,T1), thing(T1)}, 1 <= #count {1: roomTOcabinet(R1,C)}.
 cabinet_n(C) :- cabinetDomain(C), not cabinet(C).
 
 room(R) :- roomDomain(R), not room_n(R), 5 > #count {1: roomTOcabinet(R,C1), cabinetDomain(C1) }.
