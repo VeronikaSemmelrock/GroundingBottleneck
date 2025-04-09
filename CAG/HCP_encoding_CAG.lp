@@ -1,7 +1,7 @@
-cabinet(C) :- cabinetDomain(C), not cabinet_n(C), 6 > #count {1: cabinetTOthing(C,T1), thing(T1)}, 1 <= #count {1: roomTOcabinet(R1,C)}.
+cabinet(C) :- cabinetDomain(C), not cabinet_n(C), 6 > #count {T1: cabinetTOthing(C,T1), thing(T1)}, 1 <= #count {R1: roomTOcabinet(R1,C)}.
 cabinet_n(C) :- cabinetDomain(C), not cabinet(C).
 
-room(R) :- roomDomain(R), not room_n(R), 5 > #count {1: roomTOcabinet(R,C1), cabinetDomain(C1) }.
+room(R) :- roomDomain(R), not room_n(R), 5 > #count {C1: roomTOcabinet(R,C1), cabinetDomain(C1) }.
 room_n(R) :- roomDomain(R), not room(R).
 
 cabinetTOthing(C,T) :- thing(T), cabinetDomain(C), not cabinetTOthing_n(C,T), #count{1: cabinetTOthing(C1,T), C < C1 } <1, #count{1: cabinetTOthing(C1,T),  C1 < C } <1, #count{1: personTOthing(P1,T), personTOthing(P2,T2), cabinetTOthing(C,T2), P1 < P2 } <1, #count{1: personTOthing(P1,T1), personTOthing(P2,T), cabinetTOthing(C,T1), P1 < P2 } <1, #count{1: cabinetTOthing(C1,T1), C1 < C, T1 > T } <1, #count{1: cabinetTOthing(C1,T1), C < C1, T > T1 } <1.
