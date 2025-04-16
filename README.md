@@ -81,13 +81,13 @@ The DLV system can be obtained as explained on the official [website](https://ww
 
 ##### newground
 
-Newground can be obtained from[Github](https://github.com/alexl4123/newground/tree/ijcai24-NaGG). Newground NaGG (Newground2, IJCAI24) was used in our experiments.
+Newground can be obtained from [Github](https://github.com/alexl4123/newground/tree/ijcai24-NaGG). Newground NaGG (Newground2, IJCAI24) was used in our experiments.
 
   
 
 ##### ProASP
 
-ProASP is available on[Github](https://github.com/MazzottaG/ProASP). The version of ProASP used in our experiments was downloaded from GitHub on 16. December 2024. Note that ProASP is only supported on Linux.
+ProASP is available on [Github](https://github.com/MazzottaG/ProASP). The version of ProASP used in our experiments was downloaded from GitHub on 16. December 2024. Note that ProASP is only supported on Linux.
 
   
 
